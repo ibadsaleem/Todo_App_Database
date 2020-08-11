@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo-App</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+    <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-database.js"></script>
+    <script>
+      // Your web app's Firebase configuration
+      var firebaseConfig = {
+        apiKey: "AIzaSyCf0D2EuDz23DZdFhgHHFgE2QeE4WlsHJM",
+        authDomain: "todoapponlinedata.firebaseapp.com",
+        databaseURL: "https://todoapponlinedata.firebaseio.com",
+        projectId: "todoapponlinedata",
+        storageBucket: "todoapponlinedata.appspot.com",
+        messagingSenderId: "991633923776",
+        appId: "1:991633923776:web:0ed8e41411e8a01c1e1725",
+        measurementId: "G-RNE5VDPPLC"
+      };
+      firebase.initializeApp(firebaseConfig);
+
+      </script>
+
+  </head>
+
+  <body>
+    <div class="container-fluid">
+      <nav class="navbar navbar-light bg-dark">
+        <a class="navbar-brand" href="#">
+          <img
+            src="todo.jpg"
+            width="30"
+            height="30"
+            class="d-inline-block align-top"
+            alt=""
+            loading="lazy"
+          />
+          <span style="color: aqua; font-size: 16pt; font-weight: bold;">
+            Todo-App
+          </span>
+        </a>
+      </nav>
+
+      <div style="text-align: center; margin-top: 10%;">
+        <input type="text" id="Todo-item" placeholder="Add Item" />
+        <button class="btn-dark" id="btna" onclick="todoAdd()">Add</button>
+        <button onclick="delall()" class="btn-primary" id="btnd">
+          Delete All
+        </button>
+      </div>
+      <div style="background-color: white;">
+        <ul id="list"></ul>
+      </div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
